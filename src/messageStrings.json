@@ -1,0 +1,48 @@
+{
+  "USER_AUTH_EXPIRED": "USER_AUTH_EXPIRED",
+  "ORIGIN": [
+    "https://researchportal.northwestern.edu",
+    "https://stage.researchportal.northwestern.edu",
+    "https://dev.researchportal.northwestern.edu",
+    "http://foo.bar.northwestern.edu:8080",
+    "http://foo.bar.northwestern.edu:8000",
+    "https://ideation.northwestern.edu",
+    "http://foo.bar.northwestern.edu"
+  ],
+  "CORS_ENABLED": [
+    "ProjectionSave",
+    "ProjectionLoad",
+    "ProjectionRemove",
+    "Projection",
+    "Ticket",
+    "Version",
+    "User",
+    "Selection",
+    "ETLStatus",
+    "CognosEnv",
+    "PendingProposal",
+    "PendingProposalStatus",
+    "DataExports",
+    "Investigators",
+    "Dictionary",
+    "Ping",
+    "Profile",
+    "Protocols",
+    "DuoVerifyResponse",
+    "DuoSignRequest"
+  ],
+  "DUO_ENABLED": [
+    "Selection",
+    "TransactionsDownload",
+    "DataExports",
+    "Investigators",
+    "PendingProposal",
+    "PendingProposalStatus",
+    "Projection",
+    "ProjectionSave",
+    "ProjectionLoad",
+    "ProjectionRemove",
+    "Protocols"
+  ]
+
+}

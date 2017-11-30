@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "async": "^1.5.2",
+    "async-waterfall": "^0.1.5",
+    "aws-sdk": "*",
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1",
+    "dateformat": "^1.0.12",
+    "excel-export": "^0.5.1",
+    "fs": "0.0.2",
+    "json-buffer": "*",
+    "jsonwebtoken": "^8.0.1",
+    "mocha": "^2.4.5",
+    "nodemailer": "^2.7.2",
+    "nodemailer-ses-transport": "^1.5.0",
+    "request": "*",
+    "require": "*"
+  },
+  "scripts": {
+    "test": "NODE_ENV=local node test/e2e/test-app.js",
+    "unit": "NODE_ENV=local mocha test/unit/ --timeout 20000 || true",
+    "unit-live": "NODE_ENV=local trigger . 'npm run unit'"
+  },
+  "devDependencies": {
+    "async": "^1.5.2",
+    "dns": "^0.2.2",
+    "duo_web": "git+https://github.com/duosecurity/duo_nodejs.git",
+    "shortid": "^2.2.6"
+  }
+}

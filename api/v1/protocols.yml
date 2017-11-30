@@ -1,0 +1,18 @@
+path: /api/v1/protocols
+method: get
+integration: lambda
+region: us-east-1
+request:
+  passThrough: WHEN_NO_TEMPLATES
+response:
+  headers:
+     Access-Control-Allow-Origin: "'*'"
+  template: $input.json('$.body')
+  body:
+    Content-Type: "'application/json'"
+documentation:
+   summary: "FFRA Protocols endpoint"
+   description: "Created by Zee"
+   methodResponses:
+     -
+      statusCode: "200"

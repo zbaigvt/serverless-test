@@ -1,0 +1,21 @@
+path: /api/v1
+method: get
+integration: lambda
+#function: ${{self:custom.rootFuncName}}
+#authorizer: arn:aws:lambda:us-east-1:950171438376:function:amps-rd-api-poc-beta-root-lambda
+request:
+  passThrough: WHEN_NO_MATCH
+  template:
+     application/json: '${{file(./template/v1-integration-request.json.tpl)}}'
+response:
+  headers:
+     Access-Control-Allow-Origin: "'*'"
+  statusCodes:
+     200:
+         pattern: ''
+
+documentation:
+   summary: "FFRA Function"
+   description: "Just saying this is a description for FFRA Function"
+   methodResponses:
+    - '${{self:custom.commonModelSchemaFragments.MethodResponse200Json}}'

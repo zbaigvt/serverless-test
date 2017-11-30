@@ -1,0 +1,20 @@
+path: /api/v1/selection/{selection}
+method: get
+integration: lambda
+region: us-east-1
+request:
+  passThrough: WHEN_NO_TEMPLATES
+response:
+  headers:
+     Access-Control-Allow-Origin: "integration.response.body.header.Access-Control-Allow-Origin"
+  template: $input.json('$.body')
+documentation:
+   summary: "FFRA Function"
+   description: "Just saying this is a description for FFRA Function"
+   methodResponses:
+     - '${{self:custom.commonModelSchemaFragments.MethodResponse200Json}}'
+#     responseModels:
+#        application/json: 'EmptyModel'
+#      responseParameters:
+#         method.response.header.Content-Type: true
+#         method.response.header.Content-Length: true
