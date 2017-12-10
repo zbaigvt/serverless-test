@@ -1,10 +1,11 @@
 path: /exchange
 method: get 
-integration: lambda
+integration: http
 region: us-east-1
 request:
   passThrough: WHEN_NO_TEMPLATES
-  #endpoint: https://websso.it.northwestern.edu:443/amserver/identity/attributes
+  uri: https://websso.it.northwestern.edu:443/amserver/identity/attributes
+  method: get
 response:
   headers:
      Access-Control-Allow-Origin: "'*'"

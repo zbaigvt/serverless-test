@@ -86,10 +86,13 @@ functions:
           '${{file(api/v1/user-direct.yml)}}'
       - http:
           '${{file(api/v1/version.yml)}}'
-      - http:
-         '${{file(api/v1/exchange-get.yml)}}'
-      - http:
-          '${{file(api/v1/exchange-options.yml)}}'
+#     - http:
+#         '${{file(api/v1/exchange-get.yml)}}'
+#      - http:
+#          '${{file(api/v1/exchange-options.yml)}}'
+resources:
+    - '${{file(http-int/exchange-config.yml)}}'
+    - '${{file(http-int/exchange-resource.yml)}}'
 
 #      - s3: ${env:BUCKET}
 #      - schedule: rate(10 minutes)

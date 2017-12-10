@@ -1,0 +1,24 @@
+#https://cloudonaut.io/create-a-serverless-restful-api-with-api-gateway-cloudformation-lambda-and-dynamodb/
+Resources:
+  ApiGatewayMethodExchangeGet:
+    Type: "AWS::ApiGateway::Method"
+    Properties:
+      AuthorizationType: "NONE"
+      HttpMethod: "GET"
+      RequestParameters:
+        "method.request.querystring.subjectid": false
+      ResourceId:
+        "Ref": "ApiGatewayResourceExchangeXX"  
+      RestApiId:
+        "Ref": "ApiGatewayRestApi"
+      ApiKeyRequired: false
+      Integration:
+          "IntegrationHttpMethod": "GET"
+          "Type": "HTTP"
+          "Uri": "https://websso.it.northwestern.edu:443/amserver/identity/attributes"
+          "IntegrationResponses": []
+          "PassthroughBehavior": "WHEN_NO_TEMPLATES"
+          RequestTemplates:
+            "application/json": "{}"
+          RequestParameters:
+            'integration.request.querystring.subjectid': 'method.request.querystring.subjectid'
