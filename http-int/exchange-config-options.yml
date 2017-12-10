@@ -1,5 +1,5 @@
 Resources:
-  ApiGatewayMethodExchangeGet:
+  ApiGatewayMethodExchangeOptions:
     Type: "AWS::ApiGateway::Method"
     Properties:
       AuthorizationType: "NONE"

@@ -1,4 +1,3 @@
-#https://cloudonaut.io/create-a-serverless-restful-api-with-api-gateway-cloudformation-lambda-and-dynamodb/
 Resources:
   ApiGatewayMethodExchangeGet:
     Type: "AWS::ApiGateway::Method"
@@ -20,7 +19,6 @@ Resources:
             - 
               "StatusCode": "200"
               ResponseParameters:
-#                'integration.response.header.Access-Control-Allow-Origin': "'*'"
                   'method.response.header.Access-Control-Allow-Origin': "'*'"
               ResponseTemplates:
                 "application/json": "{}"
