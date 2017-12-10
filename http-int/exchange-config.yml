@@ -27,3 +27,5 @@ Resources:
             "StatusCode": "200"
             ResponseParameters:
               'method.response.header.Access-Control-Allow-Origin': '{ "description": ""}'  
+            ResponseModels:
+              "application/json": "Empty"
