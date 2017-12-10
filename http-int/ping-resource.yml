@@ -1,0 +1,11 @@
+Resources:
+  ApiGatewayResourcePing:
+   Type: "AWS::ApiGateway::Resource"
+   "Properties":
+      "ParentId":
+        Fn::GetAtt: 
+          - "ApiGatewayRestApi"
+          - "RootResourceId"     
+      "PathPart": "ping"
+      "RestApiId":
+        "Ref": "ApiGatewayRestApi"

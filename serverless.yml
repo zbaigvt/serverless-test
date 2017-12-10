@@ -94,6 +94,8 @@ resources:
     - '${{file(http-int/exchange-resource.yml)}}'
     - '${{file(http-int/exchange-config.yml)}}'
     - '${{file(http-int/exchange-config-options.yml)}}'
+    - '${{file(http-int/ping-resource.yml)}}'
+    - '${{file(http-int/ping-config-get.yml)}}'
 
 #      - s3: ${env:BUCKET}
 #      - schedule: rate(10 minutes)
