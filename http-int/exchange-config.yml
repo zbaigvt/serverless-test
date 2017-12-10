@@ -16,9 +16,14 @@ Resources:
           "IntegrationHttpMethod": "GET"
           "Type": "HTTP"
           "Uri": "https://websso.it.northwestern.edu:443/amserver/identity/attributes"
-          "IntegrationResponses": []
+          "IntegrationResponses": ["StatusCode": "200"]
           "PassthroughBehavior": "WHEN_NO_TEMPLATES"
           RequestTemplates:
             "application/json": "{}"
           RequestParameters:
             'integration.request.querystring.subjectid': 'method.request.querystring.subjectid'
+      MethodResponses:
+          -
+            "StatusCode": "200"
+            ResponseParameters:
+              'method.response.header.Access-Control-Allow-Origin': '{ "description": ""}'  
