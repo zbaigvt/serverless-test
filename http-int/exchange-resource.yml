@@ -1,9 +1,11 @@
 Resources:
-  ApiGatewayResourceExchangeXX:
+  ApiGatewayResourceExchange:
    Type: "AWS::ApiGateway::Resource"
    "Properties":
-     "ParentId":
-       "Ref": "ApiGatewayResourceApi"
-     "PathPart": "exchange"
-     "RestApiId":
-       "Ref": "ApiGatewayRestApi"
+      "ParentId":
+        Fn::GetAtt: 
+          - "ApiGatewayRestApi"
+          - "RootResourceId"     
+      "PathPart": "exchange"
+      "RestApiId":
+        "Ref": "ApiGatewayRestApi"

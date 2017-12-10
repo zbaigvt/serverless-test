@@ -8,7 +8,7 @@ Resources:
       RequestParameters:
         "method.request.querystring.subjectid": false
       ResourceId:
-        "Ref": "ApiGatewayResourceExchangeXX"  
+        "Ref": "ApiGatewayResourceExchange"  
       RestApiId:
         "Ref": "ApiGatewayRestApi"
       ApiKeyRequired: false
